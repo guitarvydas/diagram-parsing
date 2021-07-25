@@ -1,0 +1,6 @@
+makebb(ID):-
+    rect(ID,_),
+    x(ID,X),
+    y(ID,Y),
+    w(ID,Width),
+    h(ID,Height),
