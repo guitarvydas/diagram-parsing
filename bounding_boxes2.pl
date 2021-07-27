@@ -12,4 +12,4 @@ makebb(ID):-
     format("b(~w, ~w).~n", [ID,H]).
 
 makeAllBB:-
-    setof(ID,makebb(ID),_).
+    bagof(ID,makebb(ID),_).

@@ -2,5 +2,5 @@
 sort diagram.pl >fb.pl
 swipl -g 'consult(fb).' \
       -g 'consult(bounding_boxes).' \
-      -g 'makeAllBB' \
+      -g 'makeAllBB.' \
       -g 'halt.'

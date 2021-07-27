@@ -18,7 +18,7 @@ Highlighted:
 
 # Facts
 
-The diagram converted to a textual factbase for PROLOG.
+The diagram converted to a textual factbase for PROLOG. [_In this example, I will use PROLOG (SWIPL), but the work can be done in just about any language, e.g. Python, miniKanren, clojure (see also, core.logic), Datalog, JavaScript, etc.  PROLOG provides automated backtracking which can be replaced by loops/recursion in other languages._]
 
 ![image-20210725074924599](/Users/tarvydas/Library/Application Support/typora-user-images/image-20210725074924599.png)
 
@@ -63,7 +63,7 @@ To make a bounding box from the information we simply calculate:
 
 [_(0,0) is at the top-left_]
 
-We can write code to calculate the bounding box.  In this example, I will use PROLOG (SWIPL), but the calculation can be done in just about any language, e.g. Python.
+We can write code to calculate the bounding box.  
 
 Below is the SWIPL PROLOG code.  Explanation of the code follows.
 
@@ -86,7 +86,7 @@ makebb(ID):-
 
 The PROLOG code says:
 
-- All `,` separated clauses are *and*'ed' together
+- All `,`-separated clauses are *and*'ed together
 
 - ID must be a rect
 
@@ -104,6 +104,8 @@ The PROLOG code says:
 
   - bottom is Y + Height.
 
+    
+
     We see the result for object *h*.
 
 ![image-20210725083525381](/Users/tarvydas/Library/Application Support/typora-user-images/image-20210725083525381.png)
@@ -115,6 +117,21 @@ The details of running this simple query are shown below, if you want to follow 
 ![image-20210725085608631](/Users/tarvydas/Library/Application Support/typora-user-images/image-20210725085608631.png)
 
 [_N.B. The details should be boring to human readers. Repetition and simplicity are keys to machine readability and writing code that writes code.  The code for the above has been put into a bash script called bb.bash to emphasize the fact that this process can be automated._ ]
+
+# Bounding Boxes For All Objects
+
+We add the following code to the swipl query to loop over every `rect` printing the bounding box for each. Again, note that this could be done in any language.
+
+```
+
+makeAllBB:-
+    bagof(ID,makebb(ID),_).
+
+```
+
+Details: `bagof` runs makebb(ID) for every ID.  It collects the results in a bag (warning: comp sci term).  We discard the results using the `_` character.  We don't care about the actual results, only the print-out[^1].
+
+[^1]: This code produces a side effect. We could get rid of the side effect and make this more FP'ish, but why bother?  We don't need FP to express 14 lines of code. [_N.B. We will endeavour to keep things simple, by minimizing the code line count._]
 
 # See Also
 
