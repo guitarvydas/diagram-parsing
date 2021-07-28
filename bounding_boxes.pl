@@ -1,3 +1,6 @@
+:- dynamic(rect/2).
+:- dynamic(ellipse/2).
+
 makebb(ID):-
     dobject(ID,_),
     x(ID,X),

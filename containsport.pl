@@ -21,3 +21,15 @@ leftsideinsideBB(Circle,Rect):-
     Ct >= Rt, Ct =< Rb,
     Cr >= Rr,
     Cb >= Rt, Cb =< Rb.
+
+allPortContains(B):-
+    bagof([R,C],containsport(R,C),B).
+
+printAllPortContains:-
+    allPortContains(B),
+    printPortContains(B).
+
+printPortContains([]).
+printPortContains([H|T]) :-
+    format("contains(~w,~w).~n",H),
+    printPortContains(T).
