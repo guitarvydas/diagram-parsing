@@ -1,0 +1,31 @@
+contains2(R1,R2):-
+    contains1(R1,R2),
+    R1 \= R2,
+    contains1(Parent2,R2),
+    contains1(Parent,R1),
+    R1 \= R2,
+    format("contains2(~w,~w).~n",[R1,R2]).
+    !.
+
+contains2(R1,R2):-
+    contains1(R1,R2),
+
+
+if only one R contains(R,R1), then contains2(R,R1)
+  if more than one R* contains(R*,R1), then
+    Rs = smallest(R*)
+    contains(Rs,R1)
+  end if
+  end if
+
+smaller(Larger, Smaller):-
+    contains1(Larger, Smaller).	
+
+contains2(R1,R2):-
+    contains1(R1,R2).
+    \+ contains1(_,R1).
+contains2(R1,R2):-
+    contains1(R1,R2),
+    contains(Parent,R2),
+    Parent \= R1,
+    contains(Parent,R1).

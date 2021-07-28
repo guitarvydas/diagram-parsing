@@ -1,33 +1,33 @@
-rect(id1,'').
-name(id1,"d").
+rect(d,'').
+name(d,"d").
 w(d,430).
 h(d,170).
 x(d,40).
 y(d,40).
 
-rect(id2,'').
-name(id2,"e").
+rect(e,'').
+name(e,"e").
 x(e,60).
 y(e,70).
 w(e,170).
 h(e,110).
 
-rect(id3,'').
-name(id3,"f").
+rect(f,'').
+name(f,"f").
 x(f,85).
 y(f,100).
 w(f,120).
 h(f,60).
 
-rect(id4,'').
-name(id4,"g").
+rect(g,'').
+name(g,"g").
 x(g,280).
 y(g,70).
 w(g,170).
 h(g,110).
 
-rect(id5,'').
-name(id5,"h").
+rect(h,'').
+name(h,"h").
 x(h,305).
 y(h,100).
 w(h,120).

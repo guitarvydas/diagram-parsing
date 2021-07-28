@@ -13,9 +13,12 @@ swipl -g 'consult(fb).' \
 cat fb.pl fb-contains1.pl >temp.pl
 sort temp.pl >fb.pl
 
-
 swipl -g 'consult(fb).' \
       -g 'consult(contain2).' \
       -g 'printAllDeepContains.'\
-      -g 'halt.'
+      -g 'halt.' \
+      > fb-deepcontains.pl
+cat fb.pl fb-deepcontains.pl >temp.pl
+sort temp.pl >fb.pl
+
 

@@ -1,0 +1,12 @@
+contains1(d,e).
+contains1(d,f).
+contains1(d,g).
+contains1(d,h).
+contains1(d,m).
+contains1(d,n).
+contains1(e,f).
+contains1(e,m).
+contains1(f,m).
+contains1(g,h).
+contains1(g,n).
+contains1(h,n).
