@@ -5,5 +5,4 @@ sort ports.pl >fb.pl
 cat fb.pl fb-bb.pl >temp.pl
 sort temp.pl >fb.pl
 
-swipl -g 'consult(fb).' \
-      -g 'consult(containsport).'
+

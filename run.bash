@@ -6,7 +6,7 @@ cat fb.pl fb-bb.pl >temp.pl
 sort temp.pl >fb.pl
 
 swipl -g 'consult(fb).' \
-      -g 'consult(contain).' \
+      -g 'consult(contain1).' \
       -g 'allContains1.' \
       -g 'halt.' \
       > fb-contains1.pl

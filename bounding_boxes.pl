@@ -1,5 +1,5 @@
 makebb(ID):-
-    rect(ID,_),
+    dobject(ID,_),
     x(ID,X),
     y(ID,Y),
     w(ID,Width),
@@ -13,3 +13,6 @@ makebb(ID):-
 
 makeAllBB:-
     setof(ID,makebb(ID),_).
+
+dobject(ID,_):-rect(ID,_).
+dobject(ID,_):-ellipse(ID,_).
