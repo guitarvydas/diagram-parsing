@@ -23,6 +23,12 @@ contains1(f,m).
 contains1(g,h).
 contains1(g,n).
 contains1(h,n).
+deepcontains(d,f).
+deepcontains(d,h).
+deepcontains(d,m).
+deepcontains(d,n).
+deepcontains(e,m).
+deepcontains(g,n).
 h(d,170).
 h(e,110).
 h(f,60).
@@ -86,9 +92,3 @@ y(g,70).
 y(h,100).
 y(m,130).
 y(n,130).
-deepcontains(d,f).
-deepcontains(d,h).
-deepcontains(d,m).
-deepcontains(d,n).
-deepcontains(e,m).
-deepcontains(g,n).

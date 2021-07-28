@@ -1,21 +1,11 @@
 #!/bin/bash
 sort diagram.pl >fb.pl
 
-./bb.bash >fb-bb.pl
-cat fb.pl fb-bb.pl >temp.pl
+./run.bash >new-bb.pl
+cat fb.pl new-bb.pl >temp.pl
 sort temp.pl >fb.pl
 
 swipl -g 'consult(fb).' \
-      -g 'consult(contain).' \
-      -g 'allContains1.' \
-      -g 'halt.' \
-      > fb-contains1.pl
-cat fb.pl fb-contains1.pl >temp.pl
-sort temp.pl >fb.pl
-
-
-swipl -g 'consult(fb).' \
-      -g 'consult(contain2).' \
-      -g 'printAllDeepContains.'\
-      -g 'halt.'
-
+      -g 'consult(contains3).' \
+      -g 'factContains(d,e).'
+      
