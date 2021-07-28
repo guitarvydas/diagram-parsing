@@ -92,3 +92,9 @@ y(g,70).
 y(h,100).
 y(m,130).
 y(n,130).
+contains(d,e).
+contains(d,g).
+contains(e,f).
+contains(f,m).
+contains(g,h).
+contains(h,n).

@@ -11,6 +11,12 @@ b(g, 180).
 b(h, 160).
 b(m, 160).
 b(n, 160).
+contains(d,e).
+contains(d,g).
+contains(e,f).
+contains(f,m).
+contains(g,h).
+contains(h,n).
 contains1(d,e).
 contains1(d,f).
 contains1(d,g).
