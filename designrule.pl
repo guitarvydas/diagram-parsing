@@ -6,6 +6,8 @@ orphanport(ID):-
 printOrphans:-
     bagof(E,orphanport(E),B),
     printOrphan(B).
+printOrphans.
+
 
 printOrphan([]).
 printOrphan([H|T]):-
