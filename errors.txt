@@ -1,0 +1,6 @@
+Design Rule FATAL Error: orphan port xa
+Design Rule FATAL Error: orphan port xb
+Design Rule FATAL Error: orphan port ya
+Design Rule FATAL Error: orphan port yb
+Design Rule FATAL Error: orphan port za
+Design Rule FATAL Error: orphan port zb

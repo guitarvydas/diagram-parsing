@@ -15,3 +15,4 @@ printDirection([H|T]):-
 printAllDirections:-
     allDirections(Bag),
     printDirection(Bag).
+printAllDirections.
