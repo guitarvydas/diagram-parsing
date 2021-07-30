@@ -8,7 +8,7 @@ textarea {
 </head>
 <body>
 
-<h1>DaS Transpiler Workbench (app.diagrams.net to xvg to ...)</h1>
+<h1>DaS Transpiler Workbench</h1>
 
 <p>grok (decoder):</p>
 <textarea id="decodergrammar" name="a" rows="1" cols="90" placeholder="decoder grammar" style="background-color:oldlace;">
@@ -40,13 +40,13 @@ attributeValue[x] = [[${x}]]
 number [n] = [[${n}]]
 </textarea>
 
-<p>source (diagrams.net raw):</p>
-<textarea id="encodedsource" name="source" rows="17" cols="90" placeholder="diagrams.net raw source" style="background-color:oldlace;">
-<mxfile host="Electron" modified="2021-07-27T21:29:59.077Z" agent="5.0 (Macintosh; Intel Mac OS X 11_3_1) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.6.13 Chrome/89.0.4389.128 Electron/12.0.7 Safari/537.36" etag="gs7PlwAAeOMTisTk65r2" version="14.6.13" type="device"><diagram id="xGVwkZrHMsdQFUOWIs-6" name="Initial Diagram">1ZZdT4MwFEB/DY9LKB2DPeqcmpg9MT/eTKUdNAKdXRnMX2+RO1hXE7PEqbyQ9tzb2/T0htTBs7y+kWSdLgRlmeO5tHbwleN5E+TrbwN2LRj7QQsSyWmLUA8i/s4AukBLTtnGSFRCZIqvTRiLomCxMhiRUlRm2kpk5q5rkjALRDHJbPrIqUqBItftA7eMJylsHfoQyMk+GcAmJVRUBwjPHTyTQqh2lNczljXu9l6C65fAvYjRHL/JxQMJ8mf2PGqLXZ+ypDuCZIX62dJwuVuSleCLwmHVbm9QirKgrKmCHHxZpVyxaE3iJlrpltEsVXkG4S2Timv7FxlPCs2UaBJWolARVASbTSKrj+7omwOizrruViZypuROr4MqY6i8M6dVf+tjDCw9uHAUACTQaUlXubepByD0BLkTSy4brNyJKTew5XYeDbnoXHIDS+5qsHJD35Db/ZsO7Xpf2D1b54aW3GSwcr3wv7Xu1LKbDtYudv+wd+/Q5bKYTEsav9Ir/6n0tvfLkWvZzQdrFx3bxbbd8Au5+FxykSW3GKxc7P2aXD3t34mfsYPHNp5/AA==</diagram></mxfile>
+<p>source (paste .drawio file here):</p>
+<textarea id="encodedsource" name="source" rows="17" cols="90" style="background-color:oldlace;" placeholder="raw source">
+
 </textarea>
 
 <p>decoded:</p>
-<textarea id="decodertranspiled" name="transpiled" rows="17" cols="90" placeholder="decoded"  readonly style="background-color:whitesmoke;">
+<textarea id="decodertranspiled" name="transpiled" rows="1" cols="90" placeholder="decoded"  readonly style="background-color:whitesmoke;">
 </textarea>
 <br>
 <br>
@@ -56,7 +56,7 @@ number [n] = [[${n}]]
 <!----------------------------------------------------------->
 
 
-<!-- diagrams.net style expander -->
+<!-- style expander -->
 
 <p>grok (styleexpander):</p>
 <textarea id="styleexpandergrammar" name="a" rows="1" cols="90" placeholder="styleexpander grammar" style="background-color:oldlace;">
@@ -112,20 +112,20 @@ number [n] = [[${n}]]
 
 
 <p>diagrams net style expanded:</p>
-<textarea id="styleexpandertranspiled" rows="17" cols="90" placeholder="style expander"  readonly style="background-color:whitesmoke;">
+<textarea id="styleexpandertranspiled" rows="1" cols="90" placeholder="style expander"  readonly style="background-color:whitesmoke;">
 </textarea>
 <br>
 <br>
 <p id="styleexpanderstatus" > READY </p>
 
-<!-- end diagrams.net style expander -->
+<!-- end style expander -->
 
 
 <!----------------------------------------------------------->
 
 
 
-<!-- diagrams.net attribute elider -->
+<!-- attribute elider -->
 
 <p>grok (attributeelider):</p>
 <textarea id="attributeelidergrammar" name="a" rows="1" cols="90" placeholder="attributeelider grammar" style="background-color:oldlace;">
@@ -217,21 +217,22 @@ quote [c] = [[${c}]]
 
 
 <p>diagrams net attribute elider:</p>
-<textarea id="attributeelidertranspiled" rows="17" cols="90" placeholder="attribute elider"  readonly style="background-color:whitesmoke;">
+<textarea id="attributeelidertranspiled" rows="1" cols="90" placeholder="attribute elider"  readonly style="background-color:whitesmoke;">
 </textarea>
 <br>
 <br>
 <p id="attributeeliderstatus" > READY </p>
 
-<!-- end diagrams.net attribute elider -->
+<!-- attribute elider -->
 
 <!----------------------------------------------------------->
 
 
 
-<!-- diagrams.net tofb passes 1 & 2 -->
+<!-- tofb passes 1 & 2 -->
+<!-- tofb means "to factbase" -->
 
-<!-- diagrams.net tofb1 -->
+<!-- tofb1 -->
 <!-- collect cell and diagam names into a table -->
 
 <p>grok (tofb1):</p>
@@ -332,19 +333,19 @@ quote [c] = [[${c}]]
 
 
 <p>diagrams net tofb1:</p>
-<textarea id="tofb1transpiled" rows="17" cols="90" placeholder="tofb1 output"  readonly style="background-color:whitesmoke;">
+<textarea id="tofb1transpiled" rows="1" cols="90" placeholder="tofb1 output"  readonly style="background-color:whitesmoke;">
 </textarea>
 <br>
 <br>
 <p id="tofb1status" > READY </p>
 
-<!-- end diagrams.net tofb1 -->
+<!-- end tofb1 -->
 
 <!----------------------------------------------------------->
 
 
 
-<!-- diagrams.net tofb -->
+<!-- tofb -->
 
 <p>grok (tofb):</p>
 <textarea id="tofbgrammar" name="a" rows="1" cols="90" placeholder="tofb grammar" style="background-color:oldlace;">
@@ -457,17 +458,17 @@ quote [c] = [[${c}]]
 </textarea>
 
 
-<p>diagrams net tofb:</p>
-<textarea id="tofbtranspiled" rows="17" cols="90" placeholder="tofb output"  readonly style="background-color:whitesmoke;">
+<p>tofb:</p>
+<textarea id="tofbtranspiled" rows="1" cols="90" placeholder="tofb output"  readonly style="background-color:whitesmoke;">
 </textarea>
 <br>
 <br>
 <p id="tofbstatus" > READY </p>
 
-<!-- end diagrams.net tofb -->
+<!-- end tofb -->
 
 <!-- sort -->
-<p>diagrams net sort</p>
+<p>sorted factbase</p>
 <textarea id="plsorted" rows="17" cols="90" placeholder="pl sorted"  readonly style="background-color:whitesmoke;">
 </textarea>
 <br>
@@ -480,12 +481,11 @@ quote [c] = [[${c}]]
 
 <br>
 <button onclick="generate ()">Generate</button>
-<script src="../scnwb/ohm.js"></script>
-<script src="../scnwb/glue.js"></script>
-<script src="../scnwb/scope.js"></script>
-<script src="../scnwb/pako/dist/pako_inflate.js"></script>
-<script src="../scnwb/include.js"></script>
-<script src="../diagrams as syntax/phase1/support.js"></script>
+<script src="ohm.min.js"></script>
+<script src="glue.js"></script>
+<script src="scope.js"></script>
+<script src="pako_inflate.js"></script>
+<script src="support.js"></script>
 <script>
 "use strict"
 
