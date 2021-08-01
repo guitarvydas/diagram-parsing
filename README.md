@@ -1,15 +1,37 @@
 Diagram Parsing
 
-Rudimentary diagram parsing, in small steps.
+The first step is to convert a .drawio file to a factbase.
 
-0.  Create the diagram in diagram.drawio using digrams.net editor (formerly known as drawio).
+The second step is to infer various properties from the factbase (this step infers only some properties, not all - that's for later).
 
-00. Manually create a factbase diagram.pl using information from the property menu of diagrams.net. There are only 7 boxes, so creating diagram.pl manually is possible. (To see how to create the factbase automatically, see ../diagrams as syntax/phase1).
+1. Step 1 is done using the DaS WB (Diagrams as Syntax Work Bench).
 
-1. Create Bounding Boxes: See https://guitarvydas.github.io/2021/07/25/Parsing-Diagrams-Bounding-Boxes.html
+see:
 
-2. Infer Containment: (a) Modify diagram.drawio to contain 2 more inner boxes, "m" and "n". (b) First level of containment - see contain1.pl. This infers ALL containment, e.g. d contains e and d contains f, etc. In other layers, we will prune the deep containment and infer direct containment (only).
+[overview](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-DaS-Workbench-Overview.html)
 
-3. Test - ports (input and output) on all 4 sides of rect m and rect n (see runportstest.bash and portstest.pl)
+[phase 1 Decompress](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-DaS-Workbench-1-Decoding-Phase.html)
 
-4. Design Rule - error check for "orphan ports", ports not touching the sides of any rectangle. See rundesignrule.bash and designrule.pl and orphans.pl and orphans.drawio.
+[phase 2 Style Expander](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-DaS-Workbench-2-Style-Expander-Phase.html)
+
+[phase 3 Attribute Elider](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-DaS-Workbench-3-Attribute-Elider-Phase.html)
+
+[phase 4 Name Collector](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-DaS-Workbench-4-Factbase-Name-Collector.html)
+
+[phase 5 Code Emitter](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-DaS-Workbench-5-Factbase-Emitter.html)
+
+[phase 6 Sort](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-DaS-Workbench-6-Sort.html)
+
+2. Step 2 - Inferencing
+
+see:
+
+[Bounding Boxes](https://guitarvydas.github.io/2021/07/25/Parsing-Diagrams-Bounding-Boxes.html)
+
+[Containment](https://guitarvydas.github.io/2021/07/27/Parsing-Diagrams-Containment.html)
+
+[Ports](https://guitarvydas.github.io/2021/07/29/Parsing-Diagrams-Ports.html)
+
+[Connections](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-Connections.html)
+
+[Design Rules](https://guitarvydas.github.io/2021/07/30/Parsing-Diagrams-Design-Rules.html)
